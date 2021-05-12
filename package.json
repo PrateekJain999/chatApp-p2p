@@ -1,0 +1,16 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Prateek Jain",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^1.7.4",
+    "socketio": "^1.0.0"
+  }
+}
