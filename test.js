@@ -1,13 +1,13 @@
-A=[2,3,4,6]
-let min=1000
-A=A.sort()
-for(var i = 0; i < 3; i++){
+var str1 = 'plusminusplusminus';
+var str2 = 'plushellominus';
 
-    if(i - 1 >= 0){
+// do the test strings contain these terms?
+var conditions = ["plus", "minus"];
 
-        if(A[i] - A[i - 1] > 1){
-            return A[i - 1] + 1;
-        }
-    }
-}
-console.log(min)
+// run the tests against every element in the array
+var test1 = str1.match(^["plus"]);
+var test2 = conditions.every(el => str2.includes(el));
+
+// display results
+console.log(str1, ' ===> ', test1);
+console.log(str2, ' ===> ', test2);
