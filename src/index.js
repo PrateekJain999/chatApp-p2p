@@ -13,8 +13,24 @@ const io = socketio(server)
 
 app.use(express.static(publicDirectoryPath));
 
-io.on('connection', ()=>{
+// let count =0
+
+
+io.on('connection', (socket)=>{
     console.log('User Connected');
+
+    // socket.emit('countUpdated', count)
+
+    // socket.on('increment', ()=>{
+    //     count++;
+
+    //     // socket.emit('countUpdated', count)
+    //     io.emit('countUpdated', count)
+
+    // })
+
+    socket.emit('message', 'welcome')
+
 })
 
 server.listen(port, ()=>{
